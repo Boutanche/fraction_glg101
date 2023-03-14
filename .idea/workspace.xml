@@ -4,33 +4,108 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="710d7953-596b-4e81-a00a-5f08a572804b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraction_glg101.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="710d7953-596b-4e81-a00a-5f08a572804b" name="Changes" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allclasses-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allpackages-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/copy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/element-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fraction/ArithmetiqueEntiere.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fraction/Fraction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fraction/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fraction/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jquery-ui.overrides.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legal/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legal/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legal/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legal/jquery.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legal/jqueryUI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/overview-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script-dir/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script-dir/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script-dir/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serialized-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fraction/ArithmetiqueEntiere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fraction/Fraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/TestArithmetiqueEntiere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/TestFraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraction_glg101.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fraction_glg101.iml" afterDir="false" />
+    </list>
+    <list id="7a5cd91f-8f65-48b2-81ee-9dbea0e0ccd3" name="NoChanges" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2MyhGXS0Waw5hoo6heggvrxtvnq" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -39,19 +114,116 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.TestFraction.testGetNumerateur">
+    <configuration name="TestArithmetiqueEntiere" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fraction_glg101" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestArithmetiqueEntiere" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFraction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fraction_glg101" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestFraction" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFraction.testFractionIntIntEchec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fraction_glg101" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestFraction" />
+      <option name="METHOD_NAME" value="testFractionIntIntEchec" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFraction.testGetNumerateur" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fraction_glg101" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestFraction" />
+      <option name="METHOD_NAME" value="testGetNumerateur" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestFraction.testGetNumerateur" />
+        <item itemvalue="JUnit.TestArithmetiqueEntiere" />
+        <item itemvalue="JUnit.TestFraction" />
+        <item itemvalue="JUnit.TestFraction.testFractionIntIntEchec" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="710d7953-596b-4e81-a00a-5f08a572804b" name="Changes" comment="" />
+      <changelist id="7a5cd91f-8f65-48b2-81ee-9dbea0e0ccd3" name="NoChanges" comment="" />
       <created>1678745633672</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678745633672</updated>
-      <workItem from="1678745634770" duration="598000" />
+      <workItem from="1678745634770" duration="9291000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1678747050564</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678747050564</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>
