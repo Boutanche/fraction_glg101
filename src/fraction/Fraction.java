@@ -64,7 +64,8 @@ public class Fraction extends Number implements Comparable<Fraction> {
      * @throws IllegalArgumentException si numerateur ou denominateur = à Integer.MIN_VALUE
      */
     public Fraction(int aConvertir) {
-        this(aConvertir, 1);
+        this.numerateur = aConvertir;
+        this.denominateur = 1;
     }
 
     /**

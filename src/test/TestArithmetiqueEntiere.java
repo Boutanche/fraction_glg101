@@ -6,6 +6,7 @@
  */
 package test;
 
+import fraction.ArithmetiqueEntiere;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.fail;
@@ -49,7 +50,11 @@ public class TestArithmetiqueEntiere {
      */
     @Test
     void testPgcdLongLong() {
-        fail("Not yet implemented");
+        Long a = 12L;
+        Long b = 18L;
+        Long expected = 6L;
+        Long actual = ArithmetiqueEntiere.pgcd(a, b);
+        Assertions.assertEquals(expected, actual);
     }
 
     /**
@@ -57,8 +62,12 @@ public class TestArithmetiqueEntiere {
      * @link glg101.si03.mathematiques.ArithmetiqueEntiere#pgcd(int, int)}.
      */
     @Test
-    void testPgcdIntInt() {
-        fail("Not yet implemented");
+    void testPgcdIntInt(){
+        Integer a = 12;
+        Integer b = 18;
+        Integer expected = 6;
+        Integer actual = ArithmetiqueEntiere.pgcd(a, b);
+        Assertions.assertEquals(expected, actual);
     }
 
     /**
@@ -67,7 +76,11 @@ public class TestArithmetiqueEntiere {
      */
     @Test
     void testPpcmLongLong() {
-        fail("Not yet implemented");
+        Long a = 12L;
+        Long b = 18L;
+        Long expected = 36L;
+        Long actual = ArithmetiqueEntiere.ppcm(a, b);
+        Assertions.assertEquals(expected, actual);
     }
 
     /**
@@ -76,6 +89,10 @@ public class TestArithmetiqueEntiere {
      */
     @Test
     void testPpcmIntInt() {
-        fail("Not yet implemented");
+        Integer a = 12;
+        Integer b = 18;
+        Integer expected = 36;
+        Integer actual = ArithmetiqueEntiere.ppcm(a, b);
+        Assertions.assertEquals(expected, actual);
     }
 }

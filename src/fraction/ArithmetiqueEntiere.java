@@ -45,8 +45,39 @@ public class ArithmetiqueEntiere {
      * @throws IllegalArgumentException si a ou b est Long.MIN_VALUE
      */
     public static long pgcd(long a, long b) {
-        // TODO écrire l'algo en TDD
-        return 1L;  // stub
+        // Vérifications des limites
+        if (a == Long.MIN_VALUE || b == Long.MIN_VALUE) {
+            throw new IllegalArgumentException("MIN_VALUE non autorisé");
+        }
+        // Vérifications des arguments
+        if (a == 0 && b == 0) {
+            return 0;
+        }
+        // Vérifications des arguments
+        if (a == 0) {
+            return Math.abs(b);
+        }
+        // Vérifications des arguments
+        if (b == 0) {
+            return Math.abs(a);
+        }
+        // Vérifications des arguments
+        if (a < 0) {
+            a = -a;
+        }
+        // Vérifications des arguments
+        if (b < 0) {
+            b = -b;
+        }
+        // Algorithme d'Euclide
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+        }
+        return a;
     }
 
     /**
@@ -71,8 +102,39 @@ public class ArithmetiqueEntiere {
      * @throws IllegalArgumentException si a ou b est Integer.MIN_VALUE
      */
     public static int pgcd(int a, int b) {
-        // TODO écrire l'algo en TDD
-        return 1;  // stub
+        // Vérifications des limites
+        if (a == Integer.MIN_VALUE || b == Integer.MIN_VALUE) {
+            throw new IllegalArgumentException("MIN_VALUE non autorisé");
+        }
+        // Vérifications des arguments
+        if (a == 0 && b == 0) {
+            return 0;
+        }
+        // Vérifications des arguments
+        if (a == 0) {
+            return Math.abs(b);
+        }
+        // Vérifications des arguments
+        if (b == 0) {
+            return Math.abs(a);
+        }
+        // Vérifications des arguments
+        if (a < 0) {
+            a = -a;
+        }
+        // Vérifications des arguments
+        if (b < 0) {
+            b = -b;
+        }
+        // Algorithme d'Euclide
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+        }
+        return a;
     }
 
     /**
@@ -99,8 +161,33 @@ public class ArithmetiqueEntiere {
      * @throws IllegalArgumentException si a ou b est Long.MIN_VALUE
      */
     public static long ppcm(long a, long b) {
-        // TODO écrire l'algo en TDD
-        return 1L;  // stub
+        // Vérifications des limites
+        if (a == Long.MIN_VALUE || b == Long.MIN_VALUE) {
+            throw new IllegalArgumentException("MIN_VALUE non autorisé");
+        }
+        // Vérifications des arguments
+        if (a == 0 && b == 0) {
+            return 0;
+        }
+        // Vérifications des arguments
+        if (a == 0) {
+            return Math.abs(b);
+        }
+        // Vérifications des arguments
+        if (b == 0) {
+            return Math.abs(a);
+        }
+        // Vérifications des arguments
+        if (a < 0) {
+            a = -a;
+        }
+        // Vérifications des arguments
+        if (b < 0) {
+            b = -b;
+        }
+        // Algorithme d'Euclide
+        long ppcm = a * b / pgcd(a, b);
+        return ppcm;
     }
 
     /**
@@ -127,7 +214,7 @@ public class ArithmetiqueEntiere {
      * @throws IllegalArgumentException si a ou b est Integer.MIN_VALUE
      */
     public static int ppcm(int a, int b) {
-        // TODO écrire l'algo en TDD
-        return 1;  // stub
+        int ppcm = (a * b) / pgcd(a, b);
+        return ppcm;
     }
 }

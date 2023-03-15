@@ -39,6 +39,12 @@ public class TestFraction {
     private final int[] DENOMINATEUR_POSITIF = {
             1, 500000, Integer.MAX_VALUE
     };
+    private static final int INT_NUMERATEUR_POSITIF = 10;
+    private static final int INT_NUMERATEUR_NEGATIF = -10;
+    private static final int INT_DENOMINATEUR_POSITIF = 5;
+    private static final int INT_DENOMINATEUR_NEGATIF = -5;
+    private static final int INT_DENOMINATEUR_NUL = 0;
+    private static final int INT_MIN_VALUE = Integer.MIN_VALUE;
 
     /*
      * Plan de tests pour constructeurs d'état :
@@ -94,11 +100,11 @@ public class TestFraction {
     @BeforeEach
     void setUp() throws Exception {
         System.out.println("BeforeEach");
-        /*  0 */  fixture.add(new Fraction(0));                 //    0
-        /*  1 */  fixture.add(new Fraction(-1));                //   -1/1
-        /*  2 */  fixture.add(new Fraction(1));                 //    1/1
-        /*  3 */  fixture.add(new Fraction(2));                 //    2/1
-        /*  3 */  fixture.add(new Fraction(1, 2));              //    1/2
+        /*  0 */  fixture.add(new Fraction(0));                               //    0
+        /*  1 */  fixture.add(new Fraction(-1));                              //   -1/1
+        /*  2 */  fixture.add(new Fraction(1));                               //    1/1
+        /*  3 */  fixture.add(new Fraction(2));                               //    2/1
+        /*  3 */  fixture.add(new Fraction(1, 2));               //    1/2
         /* TODO à compléter */
     }
 
@@ -111,17 +117,28 @@ public class TestFraction {
         fixture.clear();
     }
 
+    @Test
+    void testFractionIntInt_Succes() {
+        Fraction fraction = new Fraction(INT_NUMERATEUR_POSITIF, INT_DENOMINATEUR_POSITIF);
+        assertEquals(INT_NUMERATEUR_POSITIF, fraction.getNumerateur());
+        assertEquals(INT_DENOMINATEUR_POSITIF, fraction.getDenominateur());
+
+        fraction = new Fraction(INT_NUMERATEUR_NEGATIF, INT_DENOMINATEUR_NEGATIF);
+        assertEquals(INT_NUMERATEUR_POSITIF, fraction.getNumerateur());
+        assertEquals(INT_DENOMINATEUR_POSITIF, fraction.getDenominateur());
+    }
+
     /**
      * Test method for {
      *     @link glg101.si03.mathematiques.Fraction#Fraction(int, int)
      * }.
      */
     @Test
-    void testFractionIntIntEchec() {
+    void testFractionIntInt_Echec() {
 
         for (int numer : NUMERATEUR_NEGATIF) {
             assertThrows(ArithmeticException.class,                   // #AE#
-                    ()->new Fraction(numer, 0));
+                    ()->new Fraction(numer, 1));
             assertThrows(IllegalArgumentException.class,              // #IAE#
                     ()->new Fraction(numer, Integer.MIN_VALUE));
         }
@@ -149,7 +166,7 @@ public class TestFraction {
      * @link glg101.si03.mathematiques.Fraction#Fraction(int, int)}.
      */
     @Test
-    void testFractionIntIntOk() {
+    void testFraction_ConstructeurIntInt_Ok() {
 
         /* cas Z0 */
         Fraction zero = new Fraction(0, 1);
@@ -453,4 +470,49 @@ public class TestFraction {
         System.out.println("test equals");
         fail("Not yet implemented");
     }
+
+    @Test
+    void testFractionIntIntEchecDenumNul() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Fraction(INT_NUMERATEUR_POSITIF, INT_DENOMINATEUR_NUL);
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Fraction(INT_NUMERATEUR_NEGATIF, INT_DENOMINATEUR_NUL);
+        });
+    }
+
+    @Test
+    void testFractionIntIntEchecMinValue() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Fraction(INT_MIN_VALUE, INT_DENOMINATEUR_POSITIF);
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Fraction(INT_NUMERATEUR_POSITIF, INT_MIN_VALUE);
+        });
+    }
+
+    @Test
+    void testFractionIntIntSingleton() {
+        Fraction fraction = new Fraction(0, INT_DENOMINATEUR_POSITIF);
+        assertEquals(0, fraction.getNumerateur());
+        assertEquals(1, fraction.getDenominateur());
+
+        fraction = new Fraction(0, INT_DENOMINATEUR_NEGATIF);
+        assertEquals(0, fraction.getNumerateur());
+        assertEquals(1, fraction.getDenominateur());
+    }
+
+    @Test
+    void testFractionIntInt_Signe_estOK() {
+        Fraction fraction = new Fraction(INT_NUMERATEUR_POSITIF, INT_DENOMINATEUR_NEGATIF);
+        assertEquals(-INT_NUMERATEUR_POSITIF, fraction.getNumerateur());
+        assertEquals(INT_DENOMINATEUR_POSITIF, fraction.getDenominateur());
+
+        fraction = new Fraction(INT_NUMERATEUR_NEGATIF, INT_DENOMINATEUR_POSITIF);
+        assertEquals(INT_NUMERATEUR_NEGATIF, fraction.getNumerateur());
+        assertEquals(INT_DENOMINATEUR_POSITIF, fraction.getDenominateur());
+    }
+
 }
