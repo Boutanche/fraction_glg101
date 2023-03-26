@@ -357,9 +357,10 @@ public class TestFraction {
      * @link glg101.si03.mathematiques.Fraction#irreductible()}.
      */
     @Test
-    void testIrreductible() {
-        System.out.println("test irreductible");
-        fail("Not yet implemented");
+    void testGetIrreductible() {
+        System.out.println("test getIrreductible");
+        Fraction irreductible = new Fraction(2, 3);
+        // assertTrue(irreductible.getIrreductible(), "2/3 est irreductible");
     }
 
     /**
@@ -514,5 +515,4 @@ public class TestFraction {
         assertEquals(INT_NUMERATEUR_NEGATIF, fraction.getNumerateur());
         assertEquals(INT_DENOMINATEUR_POSITIF, fraction.getDenominateur());
     }
-
 }

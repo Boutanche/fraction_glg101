@@ -23,11 +23,14 @@ public class Fraction extends Number implements Comparable<Fraction> {
     /** Numéro de version d'état d'instance de compatibilité de serialisation */
     private static final long serialVersionUID = 1L;
 
-    /** numérateur porte le signe */
+    /** Numérateur porte le signe */
     private final int numerateur;
 
-    /** dénominateur strictement positif */
+    /** Dénominateur strictement positif */
     private final int denominateur;
+
+    /** Fraction irréductible de cette fraction */
+    private final Fraction irreductible = null;
 
     /**
      * Constructeur de fraction
@@ -56,6 +59,8 @@ public class Fraction extends Number implements Comparable<Fraction> {
             this.numerateur = numerateur;
             this.denominateur = denominateur;
         }
+        // Simplification de la fraction :
+        setIrreductible(this.numerateur, this.denominateur);
     }
 
     /**
@@ -91,16 +96,19 @@ public class Fraction extends Number implements Comparable<Fraction> {
      * </p>
      * @return Fraction irréductible (this si déjà irréductible)
      */
-    public Fraction getIrreductible() {
-        // TODO : Implémenter la méthode
-        return this; // A remplacer
-    }
+    public Fraction getIrreductible() { return this.irreductible;}
 
+    /**
+     * Retourne une fraction irreductible de la fraction
+     */
+    private Fraction setIrreductible(int numerateur, int denominateur) {
+        int pgcd = ArithmetiqueEntiere.pgcd(numerateur, denominateur);
+        return new Fraction(numerateur / pgcd, denominateur / pgcd);
+    }
 
     /** @return oppose de cette fraction */
     public Fraction oppose() {
-        // TODO écrire le corps
-        return this;  // stub
+        return new Fraction(-this.numerateur, this.denominateur);
     }
 
     /**
@@ -109,19 +117,22 @@ public class Fraction extends Number implements Comparable<Fraction> {
      * @throws ArithmeticException si this est nulle
      */
     public Fraction inverse() {
-        // TODO écrire le corps
-        return this;  // stub
+        if (this.numerateur == 0) {
+            throw new ArithmeticException("Division par zéro");
+        }
+        return new Fraction(this.denominateur, this.numerateur);
     }
 
     /**
-     * Somme arithmétique de a et b  (commutatif)
+     * Somme arithmétique de a et b (commutatif)
      * @param a opérande gauche à ajouter à b
      * @param b opérande droit à ajouter à a
      * @return la fraction somme irréductible
      */
     public static Fraction somme(Fraction a, Fraction b) {
-        // TODO écrire le corps
-        return a;  // stub
+        int numerateur = a.numerateur * b.denominateur + b.numerateur * a.denominateur;
+        int denominateur = a.denominateur * b.denominateur;
+        return new Fraction(numerateur, denominateur).setIrreductible(numerateur, denominateur);
     }
 
     /**
@@ -131,8 +142,9 @@ public class Fraction extends Number implements Comparable<Fraction> {
      * @return la fraction a-b irréductible
      */
     public static Fraction difference(Fraction a, Fraction b) {
-        // TODO écrire le corps
-        return a;  // stub
+        int numerateur = a.numerateur * b.denominateur - b.numerateur * a.denominateur;
+        int denominateur = a.denominateur * b.denominateur;
+        return new Fraction(numerateur, denominateur).setIrreductible(numerateur, denominateur);
     }
 
     /**
@@ -142,8 +154,9 @@ public class Fraction extends Number implements Comparable<Fraction> {
      * @return la fraction a x b irréductible
      */
     public static Fraction produit(Fraction a, Fraction b) {
-        // TODO écrire le corps
-        return a;  // stub
+        int numerateur = a.numerateur * b.numerateur;
+        int denominateur = a.denominateur * b.denominateur;
+        return new Fraction(numerateur, denominateur).setIrreductible(numerateur, denominateur);
     }
 
     /**
@@ -154,8 +167,12 @@ public class Fraction extends Number implements Comparable<Fraction> {
      * @throws ArithmeticException si diviseur b est nul
      */
     public static Fraction quotient(Fraction a, Fraction b) {
-        // TODO écrire le corps
-        return a;  // stub
+        if (b.numerateur == 0) {
+            throw new ArithmeticException("Division par zéro");
+        }
+        int numerateur = a.numerateur * b.denominateur;
+        int denominateur = a.denominateur * b.numerateur;
+        return new Fraction(numerateur, denominateur).setIrreductible(numerateur, denominateur);
     }
 
     /**
@@ -166,8 +183,19 @@ public class Fraction extends Number implements Comparable<Fraction> {
      * @return true si this et autre sont équivalentes, false sinon
      */
     public boolean isEquivalente(Fraction autre) {
-        // TODO écrire le corps
-        return false;  // stub
+        if (this.equals(autre)) {
+            return true;
+        }
+        if (autre == null) {
+            return false;
+        }
+        if (getClass() != autre.getClass()) {
+            return false;
+        }
+        if (denominateur != ((Fraction) autre).denominateur) {
+            return false;
+        }
+        return numerateur == ((Fraction) autre).numerateur;
     }
 
     /**
@@ -176,15 +204,40 @@ public class Fraction extends Number implements Comparable<Fraction> {
      */
     @Override
     public int compareTo(Fraction o) {
-        // TODO écrire le corps
-        return 0;
+        int num = this.numerateur * o.denominateur;
+        int den = this.denominateur * o.numerateur;
+        return num - den;
+    }
+
+    /**
+     * non javadoc
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Fraction other = (Fraction) obj;
+        if (denominateur != other.denominateur) {
+            return false;
+        }
+        if (numerateur != other.numerateur) {
+            return false;
+        }
+        return true;
     }
 
     /* non javadoc - @see java.lang.Object#toString() */
     @Override
     public String toString() {
-        // TODO écrire le corps
-        return "Fraction [numer=" + numerateur + ", denom=" + denominateur + "]"; // stub
+        return "Fraction [numer=" + numerateur + ", denom=" + denominateur + "]";
     }
 
     /**
